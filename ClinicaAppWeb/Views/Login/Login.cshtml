@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <title>Login</title>
+    <link href="~/Estilos/Login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper bg-white">
+        <div class="h2 text-center">Clinica Alfonso Ugarte</div>
+        <div class="h4 text-muted text-center pt-2">Ingrese sus datos</div>
+        <form @Url.Action("Login", "Login") method="post" class="pt-3">
+            <div class="form-group py-2">
+                <div class="input-field"> <span class="far fa-user p-2"></span> <input type="text" placeholder="Usuario" name="user" required class=""> </div>
+            </div>
+            <div class="form-group py-1 pb-2">
+                <div class="input-field"> <span class="fas fa-lock p-2"></span> <input type="password" placeholder="Contraseña" name="pass" required class=""> <button class="btn bg-white text-muted"> <span class="far fa-eye-slash"></span> </button> </div>
+            </div>
+            <div class="d-flex align-items-start">
+                <div class="remember"> <label class="option text-muted"> Recordarmelo <input type="radio" name="radio"> <span class="checkmark"></span> </label> </div>
+                <div class="ml-auto"> <a href="#" id="forgot">Olvido su contraseña?</a> </div>
+            </div>
+            <button class="btn btn-block text-center my-3" type="submit">INGRESAR</button>
+            <div class="text-center pt-3 text-muted">Not a member? <a href="#">Sign up</a></div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "HOME PRINCIPAL -- clinica";
+}
+
+<main>
+    <header class="header" id="header">
+    </header>
+    <div style="padding-left: 50px">
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav" >
+                <div>
+                    <a href="#"><img src="@Url.Content("~/Imagenes/LOGO.jpeg")" alt="logo" height="50"></a>
+                </div> <a><h1>MENU PRINCIPAL : CLINICA ALFONSO UGARTE</h1> </a>
+            </nav>
+        </div>
+        
+        @section scripts{
+            <script src="@Url.Content("~/Scripts/Views/Home_Index.js")" type="text/javascript"></script>
+        }
+
+        <style>
+            h1 {
+            }
+        </style>
+
+    </div>
+</main>
